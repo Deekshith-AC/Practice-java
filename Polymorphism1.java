@@ -1,4 +1,4 @@
-public class Polymorphism {
+public class Polymorphism1 {
     public class PlayerRating {
 
         int playerPostion;
@@ -42,7 +42,7 @@ public class Polymorphism {
         }
 
         public static void main(String[] args) {
-            Polymorphism p = new Polymorphism();
+            Polymorphism1 p = new Polymorphism1();
             PlayerRating p1 = p.new PlayerRating(1, "Beckham");
             p1.calculateAverageRating(9.0f, 9.9f);
             p1.display();
