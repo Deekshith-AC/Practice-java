@@ -235,94 +235,95 @@ public class OverridingAndSuper
         }
         public static void main(String[] args)
         {
-            Scanner sc = new Scanner(System.in);
-            int i = 1;
-            while(i != 0)
-            {
-                System.out.println("Enter 1 for Single Participant and Enter 2 for Team Participants");
-                int de = sc.nextInt();
-                sc.nextLine();
-                if (de == 1) 
+            try (Scanner sc = new Scanner(System.in)) {
+                int i = 1;
+                while(i != 0)
                 {
-                    System.out.println("Event No\tEvent Name\tEvent Fee");
-                    System.out.println("1\tShakeALeg\t100");
-                    System.out.println("2\tSing&Win\t150");
-                    System.out.println("3\tPlayAway\t130");
-                    System.out.println("Enter the Event Number You want to Participate : ");
-                    int ev = sc.nextInt();
+                    System.out.println("Enter 1 for Single Participant and Enter 2 for Team Participants");
+                    int de = sc.nextInt();
                     sc.nextLine();
-                    String eventName = "";
-                    if (ev == 1) 
+                    if (de == 1) 
                     {
-                        eventName = "ShakeALeg";
-                    } else if (ev == 2) 
-                    {
-                        eventName = "Sing&Win";
-                    } else if (ev == 3) 
-                    {
-                        eventName = "PlayAway";
-                    } else 
-                    {
-                        System.out.println("Invalid Event Number");
-                        return;
-                    }
-        
-                    System.out.println("Enter your name: ");
-                    String name = sc.nextLine();
-                    SingleEventRegistration q = new SingleEventRegistration(name, eventName);
-                    q.registerEvent();
+                        System.out.println("Event No\tEvent Name\tEvent Fee");
+                        System.out.println("1\tShakeALeg\t100");
+                        System.out.println("2\tSing&Win\t150");
+                        System.out.println("3\tPlayAway\t130");
+                        System.out.println("Enter the Event Number You want to Participate : ");
+                        int ev = sc.nextInt();
+                        sc.nextLine();
+                        String eventName = "";
+                        if (ev == 1) 
+                        {
+                            eventName = "ShakeALeg";
+                        } else if (ev == 2) 
+                        {
+                            eventName = "Sing&Win";
+                        } else if (ev == 3) 
+                        {
+                            eventName = "PlayAway";
+                        } else 
+                        {
+                            System.out.println("Invalid Event Number");
+                            return;
+                        }
+      
+                        System.out.println("Enter your name: ");
+                        String name = sc.nextLine();
+                        SingleEventRegistration q = new SingleEventRegistration(name, eventName);
+                        q.registerEvent();
 
-                }
-                else if (de == 2)
-                {
-                    System.out.println("Event No\tEvent Name\tEach Participant Fee");
-                    System.out.println("1\tShakeALeg\t50");
-                    System.out.println("2\tSing&Win\t60");
-                    System.out.println("3\tActathon\t80");
-                    System.out.println("4\tPlayAway\t100");
-                    System.out.println("Enter the Event Number You want to Participate: ");
-                    int ev = sc.nextInt();
-                    sc.nextLine();
-                    String eventName = "";
-                    if (ev == 1) 
-                    {
-                        eventName = "ShakeALeg";
-                    } 
-                    else if (ev == 2) 
-                    {
-                        eventName = "Sing&Win";
-                    } 
-                    else if (ev == 3) 
-                    {
-                        eventName = "Actathon";
-                    } 
-                    else if (ev == 4) 
-                    {
-                        eventName = "PlayAway";
-                    } 
-                    else 
-                    {
-                        System.out.println("Invalid Event Number");
-                        return;
                     }
-                    System.out.println("Enter your name: ");
-                    String name = sc.nextLine();
-                    System.out.println("Enter your team's number : ");
-                    int tN = sc.nextInt();
-                    System.out.println("Enter number of participant : ");
-                    int NoOfP = sc.nextInt();
-                    TeamEventRegistration w = new TeamEventRegistration(name, eventName, tN, NoOfP);
-                    w.registerEvent();             
+                    else if (de == 2)
+                    {
+                        System.out.println("Event No\tEvent Name\tEach Participant Fee");
+                        System.out.println("1\tShakeALeg\t50");
+                        System.out.println("2\tSing&Win\t60");
+                        System.out.println("3\tActathon\t80");
+                        System.out.println("4\tPlayAway\t100");
+                        System.out.println("Enter the Event Number You want to Participate: ");
+                        int ev = sc.nextInt();
+                        sc.nextLine();
+                        String eventName = "";
+                        if (ev == 1) 
+                        {
+                            eventName = "ShakeALeg";
+                        } 
+                        else if (ev == 2) 
+                        {
+                            eventName = "Sing&Win";
+                        } 
+                        else if (ev == 3) 
+                        {
+                            eventName = "Actathon";
+                        } 
+                        else if (ev == 4) 
+                        {
+                            eventName = "PlayAway";
+                        } 
+                        else 
+                        {
+                            System.out.println("Invalid Event Number");
+                            return;
+                        }
+                        System.out.println("Enter your name: ");
+                        String name = sc.nextLine();
+                        System.out.println("Enter your team's number : ");
+                        int tN = sc.nextInt();
+                        System.out.println("Enter number of participant : ");
+                        int NoOfP = sc.nextInt();
+                        TeamEventRegistration w = new TeamEventRegistration(name, eventName, tN, NoOfP);
+                        w.registerEvent();             
+                    }
+                     else 
+                    {
+                        System.out.println("Enter Valid Input");
+                    }
+                    System.out.println("Do you want to register another participant? (Y/N)");
+                    String dev  = sc.nextLine();
+                    i = dev.equals("N") ? 0 : 1; 
                 }
-                 else 
-                {
-                    System.out.println("Enter Valid Input");
-                }
-                System.out.println("Do you want to register another participant? (Y/N)");
-                String dev  = sc.nextLine();
-                i = dev.equals("N") ? 0 : 1; 
+                sc.close();
             }
-            sc.close();
         }
 }
 
