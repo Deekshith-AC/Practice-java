@@ -26,7 +26,7 @@
 
 
 
-class Loan1 {
+class Loan2 {
     int loanNO;
     int accountNO;
     int customerNO;
@@ -40,7 +40,7 @@ class Loan1 {
         loanCounter = 100;
     }
 
-    Loan1() 
+    Loan2() 
     {
         loanCounter++;
     }
@@ -75,7 +75,7 @@ class Loan1 {
         return loanNO;
     }
 
-    Loan1(int accountNO, int customerNO, float loanAmount, int loanDuration, float interest) {
+    Loan2(int accountNO, int customerNO, float loanAmount, int loanDuration, float interest) {
         this.accountNO = accountNO;
         this.customerNO = customerNO;
         this.loanAmount = loanAmount;
@@ -85,14 +85,14 @@ class Loan1 {
     }
 }
 
-class LoanTester2 extends Loan1
+class LoanTester2 extends Loan2
 {
     public static void main(String[] args)
     {
-        Loan1 ob1 = new Loan1(664101, 699, 40000.00f, 5, 12.5f);
-        Loan1 ob2 = new Loan1(664102, 700, 50000.00f, 10, 12.5f);
-        Loan1 ob3 = new Loan1();
-        Loan1 ob4 = new Loan1();
+        Loan2 ob1 = new Loan2(664101, 699, 40000.00f, 5, 12.5f);
+        Loan2 ob2 = new Loan2(664102, 700, 50000.00f, 10, 12.5f);
+        Loan2 ob3 = new Loan2();
+        Loan2 ob4 = new Loan2();
 
         System.out.println(ob1.getAccountNO());
         System.out.println(ob2.getLoanDuration());
