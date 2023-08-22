@@ -1,3 +1,4 @@
+package Java_fundamentals;
 // Problem Statement:
 // Objective: To understand the usage and implementation of Methods with variable arguments.
 

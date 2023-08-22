@@ -1,3 +1,4 @@
+package Java_fundamentals;
 class Inheritance {
     static class E {
         int empID;

@@ -1,3 +1,4 @@
+package Java_fundamentals;
 // Exercise-b (Usage of static blocks):
 
 // Objective: To understand how to use static blocks.

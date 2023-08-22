@@ -1,3 +1,4 @@
+package Java_fundamentals;
 // interfaces.java
  interface DataProvider
  {

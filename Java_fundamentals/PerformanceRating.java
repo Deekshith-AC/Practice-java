@@ -1,3 +1,4 @@
+package Java_fundamentals;
 // Problem Statement:
 // Objective: To develop a Java program to understand the usage of static and final keywords.
 

@@ -1,3 +1,4 @@
+package Java_fundamentals;
 public class Ploymorphism2 {
     public static class Registration {
         String customerName, passportNo, pancardNo;

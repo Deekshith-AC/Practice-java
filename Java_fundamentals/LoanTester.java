@@ -1,3 +1,4 @@
+package Java_fundamentals;
 // Problem Statement:
 // Objective: To understand how to create variables, blocks, and methods using static and how to instantiate objects outside the class for the class's private constructors.
 
