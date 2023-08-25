@@ -75,11 +75,15 @@ public class interfaces
     public static void main(String[] args)
     {
         DataProvider i1 = new Intern(5000, 500);
+        //i1
         System.out.println();
         DataProvider t1 = new Trainee(6000);
         System.out.println();
         DataProvider i2 = new Intern(8000, 500);
         System.out.println();
+        i1.hashCode();
+        i2.hashCode();
+        t1.hashCode();
     }
     
 }
